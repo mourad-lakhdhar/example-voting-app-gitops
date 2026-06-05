@@ -11,7 +11,7 @@ spec:
       app: vote
   namespaceSelector:
     matchNames:
-      - default
+      - example-voting-app
   endpoints:
     - port: vote-service
       path: /metrics
