@@ -2,7 +2,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: vote
-  namespace: example-voting-app
+  namespace: monitoring
 spec:
   selector:
     matchLabels:
@@ -11,6 +11,6 @@ spec:
     matchNames:
       - default
   endpoints:
-    - port: 8080
+    - port: vote-service
       path: /metrics
       interval: 15s
